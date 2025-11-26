@@ -797,79 +797,34 @@ footer .footer_bottom .social-icons a:hover {
   transform: translateY(-3px);
 }
 
-@media (max-width: 1024px) {
-  .sectionTwo .img_left {
-    position: static;
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
   }
-  .sectionFour .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  footer .footer_content {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  header nav .nav .nav-menu {
-    display: none;
-  }
-  header .hero .hero-content .hero-text h1 {
-    font-size: 2.2rem;
-  }
-  .sectionOne .featured {
-    padding: 24px;
-  }
-  .sectionOne .featured .featured_img {
-    grid-template-columns: 1fr;
-  }
-  .sectionOne .featured .button {
-    flex-wrap: wrap;
-  }
-  .sectionTwo .cards .box {
-    grid-template-columns: 1fr;
-  }
-  .sectionThree .cards {
-    grid-template-columns: 1fr;
-  }
-  .sectionFour .cards {
-    grid-template-columns: 1fr;
-  }
-  .sectionFive .blog-content {
-    grid-template-columns: 1fr;
-  }
-  .sectionSix .content {
-    grid-template-columns: 1fr;
-  }
-  .sectionSix .content .contact_info {
-    grid-template-columns: 1fr;
-  }
-  footer .newsletter {
+  /* HEADER */
+  header nav .nav {
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
   }
-  footer .newsletter .newsletter_form {
-    width: 100%;
+  header nav .nav-menu {
+    display: none; /* Agar burger qilishni xohlasangiz yozib beraman */
   }
-  footer .newsletter .newsletter_form input {
-    width: 100%;
-  }
-  footer .footer_content {
-    grid-template-columns: 1fr;
-  }
-  footer .footer_bottom {
-    flex-direction: column;
-    gap: 24px;
+  header .hero {
+    padding: 60px 0;
     text-align: center;
   }
-}
-@media (max-width: 480px) {
-  header .hero .hero-content .hero-text h1 {
-    font-size: 1.8rem;
+  header .hero .hero-text h1 {
+    font-size: 2rem;
   }
-  .section_header h2 {
-    font-size: 1.8rem;
+  header .hero .hero-text p {
+    font-size: 1rem;
+  }
+  header .hero button {
+    width: 100%;
+  }
+  /* SECTION ONE */
+  .sectionOne .featured {
+    padding: 20px;
   }
   .sectionOne .featured .featured-header {
     flex-direction: column;
@@ -878,7 +833,106 @@ footer .footer_bottom .social-icons a:hover {
   .sectionOne .featured .featured-header .search-input {
     width: 100%;
   }
+  .sectionOne .featured .button {
+    flex-wrap: wrap;
+  }
+  .sectionOne .featured .button .btn {
+    width: calc(50% - 8px);
+  }
+  .sectionOne .featured .featured_img {
+    grid-template-columns: 1fr;
+  }
+  .sectionOne .featured .featured_img img {
+    height: 200px;
+  }
+  /* SECTION TWO */
+  .sectionTwo .cards {
+    flex-direction: column;
+  }
+  .sectionTwo .cards .img_left {
+    width: 100%;
+    height: 380px;
+  }
+  .sectionTwo .cards .img_left h3 {
+    left: 20%;
+    bottom: 40%;
+    font-size: 1.6rem;
+  }
+  .sectionTwo .cards .box {
+    grid-template-columns: 1fr;
+  }
+  .sectionTwo .cards .box .card {
+    height: 220px;
+  }
+  .sectionTwo .cards .box .card h3 {
+    font-size: 1.4rem;
+    left: 20%;
+  }
+  /* SECTION THREE */
+  .sectionThree .cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .sectionThree .cards .about_img img:nth-child(2) {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+  /* SECTION FOUR */
+  .sectionFour .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .sectionFour .cards .box img {
+    height: 200px;
+  }
+  .sectionFour .cards h3 {
+    font-size: 1rem;
+  }
+  /* SECTION FIVE */
+  .sectionFive .blog-content {
+    grid-template-columns: 1fr;
+  }
+  .sectionFive .blog-content .blog_video img {
+    height: 240px;
+  }
+  /* SECTION SIX - CONTACT */
+  .sectionSix .content {
+    flex-direction: column;
+    gap: 40px;
+  }
   .sectionSix .content .form .row {
     grid-template-columns: 1fr;
+  }
+  .sectionSix .content .contact_info {
+    grid-template-columns: 1fr;
+  }
+  /* FOOTER */
+  footer .newsletter {
+    flex-direction: column;
+    gap: 16px;
+  }
+  footer .newsletter .newsletter_form {
+    flex-direction: column;
+  }
+  footer .newsletter .newsletter_form input {
+    width: 100%;
+  }
+  footer .newsletter .newsletter_form .btn-subscribe {
+    width: 100%;
+  }
+  footer .footer_content {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  footer .footer_content .footer_col h4,
+  footer .footer_content .footer_link h4 {
+    font-size: 1rem;
+  }
+  footer .footer_bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */
